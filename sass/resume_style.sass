@@ -1,0 +1,453 @@
+@mixin flex_center
+  display: flex
+  justify-content: center
+  align-items: center
+  
+//h's default value is w
+@mixin size($w, $h :$w)
+  width: $w
+  height: $h
+  
+  
+*
+  font-family: "微軟正黑體"
+
+body, html
+  // zoom: 90%
+  width: 100%
+  height: 100%
+  margin: 0
+  padding: 0
+  // position: relative
+// .container
+//   padding: 0px 10px
+//----------------debug-------------
+// #profile, #portfolio
+//   display: none
+//----------------debug-------------
+nav.navbar.navbar-default
+  .container
+    padding: 0px 70px
+  // background-color: transparent
+  .mailicon
+    width: 50px
+    height: 50px
+    // background-color: #000
+    background-size: cover
+    background-image: url("http://www.ment.com.tw/themes/zh-tw/assets/images/header_social_ml.png")
+  a
+    color: black
+    transition: 0.5s
+    &:hover
+      color: #111
+    .fbicon
+      position: absolute
+      top: 10px
+      width: 30px
+      height: 30px
+      background-color: #000
+    
+h1, h2, h3, h4, h5, h6
+  text-align: center
+  
+section
+  padding: 80px 0px
+  // let <p> auto new line
+  word-wrap: break-word
+  .section-heading
+    font-size: 36px
+    margin-top: 0px
+  .section-subheading
+    font-size: 16px
+
+section#profile
+  background-color: #eee
+  // .container
+  //   padding: 0
+  .col-md-5, .col-md-7
+    // padding: 0px
+  .icon-sea
+    width: 80px
+    margin-bottom: 20px
+  .profile-img
+    position: relative
+    right: 100px
+    width: 130%
+    height: 100%
+    padding-bottom: 10px
+    padding-top: 25px
+    // padding-right: 15px
+    
+section#exp
+  .hidden
+    visibility: hidden
+  position: relative
+  background-image: url("")
+  // border: solid 3px black
+  .line_vertical
+    position: absolute
+    margin: auto
+    padding: 0
+    top: 180px
+    left: 50%
+    transform: translateX(-50%)
+    width: 20px
+    height: 1400px
+    background-color: #aaa
+    overflow: hidden
+  .anismokefly
+    animation: smokefly 6s 1 ease-in
+    @keyframes smokefly
+      0%
+        opacity: 0
+        top: 340px
+        height: 20px
+      25%
+        top: 200px
+        height: 130px
+      40%
+        top: 180px
+        height: 180px
+      50%
+        top: 180px
+        height: 180px
+      100%
+        opacity: 0.7
+        top: 180px
+        height: 1400px
+  .aniboxline
+    animation: boxline 6s 1 ease-in
+    @keyframes boxline
+      0%
+        opacity: 0
+      80%
+        opacity: 0
+      100%
+        opacity: 1
+  .boxview
+    position: relative
+    margin: auto
+    padding: 0
+    width: 20px
+    height: 1500px
+    background-color: transparent
+    .line_horizontal
+      &:after
+        position: absolute
+        content: "●"
+        color: #aaa
+        top: -9px
+        animation: boxline 6s 1 ease-in
+    .left
+      text-align: left
+      position: absolute
+      top: 160px
+      .box
+        padding: 30px
+        // border: solid 1px black
+        width: 400px
+        position: relative
+        // 定位點在中間,右邊界100%=對齊中間往左長出來
+        right: 100%
+        
+      .line_horizontal
+        position: absolute
+        top: 0px
+        left: calc(100% - 70px)
+        width: 70px
+        height: 2px
+        background-color: #aaa
+        // animation: boxline 6s 1 ease-in
+        // transform: rotate(180deg)
+        &:after
+          left: -3px
+        h3
+          position: absolute
+          top: -14px
+          right: calc(100% + 30px)
+    .right
+      text-align: left
+      position: absolute
+      top: 2px
+      .box
+        // border: solid 1px black
+        padding: 30px
+        width: 400px
+        position: relative
+        left: 20px
+        // animation: boxline 6s 1 ease-in
+      .line_horizontal
+        position: absolute
+        top: 0px
+        left: 0px
+        width: 70px
+        height: 2px
+        background-color: #aaa
+        // animation: boxline 6s 1 ease-in
+        &:after
+          right: -3px
+        h3
+          position: absolute
+          top: -14px
+          left: calc(100% + 30px)
+      .firstbox
+        animation: none
+        .line_horizontal
+          animation: none
+          &:after
+            animation: none
+  
+  .rocket
+    position: absolute
+    left: 50%
+    top: 1530px
+    transform: translateX(-52%)
+    width: 150px
+    height: 150px
+  .anirocketfly
+    animation: rocketfly 6s 1 ease-in
+    @keyframes rocketfly
+      0%
+        top: 330px
+      50%
+        top: 330px
+      100%
+        top: 1530px
+    
+  .fire
+    position: absolute
+    left: 50%
+    top: 310px
+    transform: translateX(-50%)
+    width: 60px
+    height: 80px
+  .somke1
+    background-image: url("https://c1.staticflickr.com/5/4259/34268020674_b64c1458f6_o.png")
+    background-size: 230px 150px
+    background-repeat: no-repeat
+    background-position: center 
+    position: absolute
+    z-index: 3
+    left: 50%
+    top: 80px
+    transform: translateX(-50%)
+    width: 230px
+    height: 230px
+    opacity: 0.7
+  .anismoke1fly
+    animation: smoke1fly 4s 1 ease
+    @keyframes smoke1fly
+      0%
+        opacity: 0.4
+        top: 230px
+        background-size: 100px 80px
+      100%
+        top: 80px
+        opacity: 0.7
+        background-size: 230px 150px
+        
+  .somke2
+    background-image: url("https://c1.staticflickr.com/5/4227/34268020324_4befab786e_o.png")
+    background-size: 180px 100px
+    background-repeat: no-repeat
+    background-position: center 
+    position: absolute
+    z-index: -1
+    left: 45%
+    top: 120px
+    transform: translateX(-50%) rotate(-180deg)
+    width: 230px
+    height: 230px
+    opacity: 0.7
+  .anismoke2fly
+    animation: smoke2fly 4s 1 
+    @keyframes smoke2fly
+      0%
+        opacity: 0.5
+        left: 50%
+        top: 230px
+        background-size: 80px 60px
+      40%
+        top: 130px
+      60%
+        top: 110px
+      80%
+        background-size: 180px 100px
+        top: 130px
+      100%
+        opacity: 0.7
+        top: 120px
+        background-size: 180px 100px
+  .somke3
+    background-image: url("https://c1.staticflickr.com/5/4227/34268020324_4befab786e_o.png")
+    background-size: 180px 120px
+    background-repeat: no-repeat
+    background-position: center 
+    position: absolute
+    z-index: -1
+    left: 53%
+    top: 130px
+    transform: translateX(-50%) rotate(10deg)
+    width: 230px
+    height: 230px
+    opacity: 0.7
+  .anismoke3fly
+    animation: smoke3fly 4.5s 1
+    @keyframes smoke3fly
+      0%
+        left: 50%
+        opacity: 0.6
+        top: 230px
+        background-size: 80px 60px
+      40%
+        top: 130px
+      60%
+        top: 150px
+      70%
+        background-size: 180px 120px
+      80%
+        top: 120px
+      100%
+        opacity: 0.7
+        top: 130px
+section#portfolio
+  .container
+    padding: 0px 20px
+  .row
+    position: relative
+    transition: 0.5s
+    .arrow_left, .arrow_right
+      +flex_center
+      position: absolute
+      top: 50%
+      +size(40px)
+      color: black
+      border: solid 1px black
+      border-radius: 50%
+      transition: 0.5s
+      transform: translateY(-50%)
+      cusor: pointer
+
+      &:hover
+        background-color: black
+        color: white
+    .arrow_left
+      left: -50px
+    .arrow_right
+      right: -50px
+  .youtube
+    position: relative
+    width: 100%
+    height: 0
+    padding-bottom: 56.25%
+  #youtubeCover
+    width: 100%
+    height: 0px
+    // ratio between width and height
+    padding-top: 56%
+    background-size: cover
+    +flex_center
+    .ytp-large-play-button-bg
+      transition: 0.3s
+    &:hover
+      .ytp-large-play-button-bg
+        fill: red
+      
+    .ytp-button
+      position: absolute
+      background-color: transparent
+      border: none
+      width: 20%
+      height: 20%
+      // 56-20/2
+      top: 46%
+  
+  .ytPlayer
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+  #yt-with-Cover
+    z-index: -1
+    opacity: 0
+  #yt-without-Cover
+    z-index: 1
+    opacity: 1
+    
+  #webCover
+    // ratio between width and height
+    padding-top: 56%
+    background-size: cover
+    
+    
+@media (min-width: 1200px)
+  .nav, p
+    font-size: 18px
+  section#profile
+    .profile-img
+      position: relative
+      right: 150px
+      width: 130%
+      height: 100%
+      padding-bottom: 10px
+      padding-top: 35px
+  section#exp
+    .anismokefly
+      animation: smokefly 6s 1 ease-in
+      @keyframes smokefly
+        0%
+          opacity: 0
+          top: 340px
+          height: 20px
+        25%
+          top: 200px
+          height: 130px
+        40%
+          top: 180px
+          height: 180px
+        50%
+          top: 180px
+          height: 180px
+        100%
+          opacity: 0.7
+          top: 180px
+          height: 1600px
+    .boxview
+      .left
+        .box
+          width: 480px
+      .right
+        .box
+          width: 480px
+    .line_vertical
+      height: 1600px
+      // animation: smokefly 6s 1 ease-in
+      // @keyframes smokefly
+      //   0%
+      //     height: 180px
+      //   50%
+      //     height: 180px
+      //   100%
+      //     height: 1600px
+    .rocket
+      top: 1730px
+    .anirocketfly
+      animation: rocketfly 6s 1 ease-in
+      @keyframes rocketfly
+        0%
+          top: 330px
+        50%
+          top: 330px
+        100%
+          top: 1730px
+
+@media (max-width: 993px)
+  section#profile
+    .profile-img
+      position: relative
+      right: 30px
+      width: 100%
+      height: 80%
+      padding-bottom: 10px
+      padding-top: 35px
