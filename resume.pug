@@ -4,144 +4,144 @@
 //- meta(property="og:image", content="https://i.imgur.com/jYichyn.png")
 
 //***boostrap toggle active -> jquery要在boostrap前include
-nav.navbar.navbar-default.navbar-fixed-top.navbar-top
-  .container
-    .navbar-header
-      a.navbar-brand 萬用工具人
-        img(src="https://c1.staticflickr.com/5/4210/34268020514_6bd81107a6_o.png", alt="",style="height:250%;position:relative;bottom:35px;right:55px;")
-        h5 
-    .navbar-collapse.collapse
-      .nav.navbar-nav.navbar-right
-        li.active
-          a(href="#profile") HOME
-        li
-          a(href="#portfolio") 作品集
-        li
-          a(href="#exp") 斌綸編年史
-        li
-          a.mailicon(href="mailto:acerxp511@msn.com")
-        li
-          a(href="https://www.facebook.com/profile.php?id=100000395687172" target="_blank")
-            img.fbicon(src="https://static.wixstatic.com/media/23fd2a2be53141ed810f4d3dcdcd01fa.png/v1/fill/w_45,h_45,al_c,usm_0.66_1.00_0.01/23fd2a2be53141ed810f4d3dcdcd01fa.png", alt="")
-section#profile
-  .container
-    .row
-      .col-md-5(data-50="transform: translateX(0px); opacity: 1" data-300="transform: translateX(-300px); opacity: 0" )
-        img.profile-img(src="https://c1.staticflickr.com/5/4239/34268020464_22e21b92b5_o.png", alt="")
-        //https://scontent-tpe1-1.xx.fbcdn.net/v/t1.0-9/10173814_842857419070773_6948918794639894241_n.jpg?oh=3fa9a89accd5bd844c1fb5905e8062c1&oe=5985860A
-      .col-md-7(data-50="transform: translateY(0px)" data-500="transform: translateY(-150px)")
-        h2 
-          b 我想找的不是工作，是人生。
-        br
-        p.content 　　我是蘇斌綸，喜歡有趣的人、事、物。 國中時因為接觸到楓之谷很酷炫的外掛，而開始想學程式， 到目前為止的人生都在努力的追求成績與技術...<br>　　大學時在TEDxTaipei年會，還有網路上看到很多跟我年紀相仿的人：為臺灣而教、臺灣吧、阿滴英文、圖文不符、Selfpick...等，他們都在為臺灣社會努力著，我也希望自己能加入他們的行列，但不知道什麼樣的能力才能幫助到他們，所以努力學習各種技能，<b>希望自己能超越小7店員，成為萬用工具人</b>，雖然指導教授是電腦圖學專長，但Android、iOS、Web...等很多程式相關的東西我都有涉略過一點。可是後來才發現，初出茅廬的年輕人想找新創團隊的工作不是很好找，於是先把目標轉向中大型企業，進去之後覺得企業文化和團隊氣氛不是很喜歡，當時萬念俱灰的我，把花光錢當作是一種洩憤，對自己說：「反正微薄的薪水，存一百年也買不到什麼東西，倒不如把錢花光，一些拿去贊助有夢想的人，一些拿去學自己想學的。」我想，在找到自己喜歡的環境之前，也許贊助有夢想的人，才能讓我在庸庸碌碌的人生中感覺到一點救贖吧！
-        p
-          b 我是蘇斌綸，我想找的不是工作，是人生。<br>我希望被看見的不是我的專業能力，而是我的潛力，還有我面對人生的態度。
-          
-section#portfolio
-  h1(data-bottom-top="transform: translateY(-50px);opacity: 0" data-center="transform: translateY(0px);opacity: 1") 作品集
-  //- h4 作品
-  hr
-  .container
-    ul.nav.nav-tabs(data-bottom-top="transform: translateY(-50px);opacity: 0" data-center="transform: translateY(0px);opacity: 1")
-      li.active
-        a(data-toggle="tab" @click="setnowtab('web')") 網頁開發(前端)
-      li 
-        a(data-toggle="tab" @click="setnowtab('game')") 遊戲開發(前端)
-      li 
-        a(data-toggle="tab" @click="setnowtab('android')") Android App
-      li 
-        a(data-toggle="tab" @click="setnowtab('cg')") 電腦圖學
-      li 
-        a(data-toggle="tab" @click="setnowtab('studyproject')") 大學專題
-      li 
-        a(data-toggle="tab" @click="setnowtab('video')") 影片剪輯
+#app
+  nav.navbar.navbar-default.navbar-fixed-top.navbar-top
+    .container
+      .navbar-header
+        a.navbar-brand 萬用工具人
+          img(src="https://c1.staticflickr.com/5/4210/34268020514_6bd81107a6_o.png", alt="",style="height:250%;position:relative;bottom:35px;right:55px;")
+          h5 
+      .navbar-collapse.collapse
+        .nav.navbar-nav.navbar-right
+          li.active
+            a(href="#profile") HOME
+          li
+            a(href="#portfolio") 作品集
+          li
+            a(href="#exp") 斌綸編年史
+          li
+            a.mailicon(href="mailto:acerxp511@msn.com")
+          li
+            a(href="https://www.facebook.com/profile.php?id=100000395687172" target="_blank")
+              img.fbicon(src="https://static.wixstatic.com/media/23fd2a2be53141ed810f4d3dcdcd01fa.png/v1/fill/w_45,h_45,al_c,usm_0.66_1.00_0.01/23fd2a2be53141ed810f4d3dcdcd01fa.png", alt="")
+  section#profile
+    .container
+      .row
+        .col-md-5(data-50="transform: translateX(0px); opacity: 1" data-300="transform: translateX(-300px); opacity: 0" )
+          img.profile-img(src="https://c1.staticflickr.com/5/4239/34268020464_22e21b92b5_o.png", alt="")
+          //https://scontent-tpe1-1.xx.fbcdn.net/v/t1.0-9/10173814_842857419070773_6948918794639894241_n.jpg?oh=3fa9a89accd5bd844c1fb5905e8062c1&oe=5985860A
+        .col-md-7(data-50="transform: translateY(0px)" data-500="transform: translateY(-150px)")
+          h2 
+            b 我想找的不是工作，是人生。
+          br
+          p.content 　　我是蘇斌綸，喜歡有趣的人、事、物。 國中時因為接觸到楓之谷很酷炫的外掛，而開始想學程式， 到目前為止的人生都在努力的追求成績與技術...<br>　　大學時在TEDxTaipei年會，還有網路上看到很多跟我年紀相仿的人：為臺灣而教、臺灣吧、阿滴英文、圖文不符、Selfpick...等，他們都在為臺灣社會努力著，我也希望自己能加入他們的行列，但不知道什麼樣的能力才能幫助到他們，所以努力學習各種技能，<b>希望自己能超越小7店員，成為萬用工具人</b>，雖然指導教授是電腦圖學專長，但Android、iOS、Web...等很多程式相關的東西我都有涉略過一點。可是後來才發現，初出茅廬的年輕人想找新創團隊的工作不是很好找，於是先把目標轉向中大型企業，進去之後覺得企業文化和團隊氣氛不是很喜歡，當時萬念俱灰的我，把花光錢當作是一種洩憤，對自己說：「反正微薄的薪水，存一百年也買不到什麼東西，倒不如把錢花光，一些拿去贊助有夢想的人，一些拿去學自己想學的。」我想，在找到自己喜歡的環境之前，也許贊助有夢想的人，才能讓我在庸庸碌碌的人生中感覺到一點救贖吧！
+          p
+            b 我是蘇斌綸，我想找的不是工作，是人生。<br>我希望被看見的不是我的專業能力，而是我的潛力，還有我面對人生的態度。
 
-    .row(data-0="transform: translateY(-50px);opacity: 0" data-300="transform: translateY(0px);opacity: 1" )
-      div(v-if="portfolioData[nowtab].length > 1")
-        .arrow_left(@click="delta(-1)")
-          i.fa.fa-angle-left
-        .arrow_right(@click="delta(1)")
-          i.fa.fa-angle-right
-      .col-md-6
-        //沒有圖片,直接顯示youtube
-        div(v-if="portfolioData[nowtab][nowindex].coverImg ===''")
-          .youtube(v-if="portfolioData[nowtab][nowindex].youtubeLink !==''", style="display:block")
-            iframe#yt-without-Cover.ytPlayer(:src="portfolioData[nowtab][nowindex].youtubeLink+'?rel=0'", frameborder="0")
-        div(v-else)
-          .youtube(v-if="portfolioData[nowtab][nowindex].youtubeLink !==''")
-            iframe#yt-with-Cover.ytPlayer(:src="portfolioData[nowtab][nowindex].youtubeLink+'?rel=0'", frameborder="0")
-            #youtubeCover(@click="show", :style="{'background-image': 'url('+portfolioData[nowtab][nowindex].coverImg+')', 'cursor':'pointer'}")
-              button.ytp-large-play-button.ytp-button
-                svg(height='100%', version='1.1', viewbox='0 0 68 48', width='100%')
-                  path.ytp-large-play-button-bg(d='m.66 37.62c0 0 .66 4.7 2.7 6.77 2.58 2.71 5.98 2.63 7.49 2.91 5.43.52 23.1.68 23.12.68 0-1.3e-5 14.29-.02 23.81-.71 1.32-.15 4.22-.17 6.81-2.89 2.03-2.07 2.7-6.77 2.7-6.77 0 0 .67-5.52.67-11.04l0-5.17c0-5.52-.67-11.04-.67-11.04 0 0-.66-4.7-2.7-6.77C62.03.86 59.13.84 57.8.69 48.28 0 34 0 34 0 33.97 0 19.69 0 10.18.69 8.85.84 5.95.86 3.36 3.58 1.32 5.65.66 10.35.66 10.35c0 0-.55 4.5-.66 9.45l0 8.36c.1 4.94.66 9.45.66 9.45z', fill='#1f1f1e', fill-opacity='0.81')
-                  path(d='m26.96 13.67 18.37 9.62-18.37 9.55 0-19.17z', fill='#fff')
-                  path(d='M45.02 23.46 45.32 23.28 26.96 13.67 43.32 24.34 45.02 23.46z', fill='#ccc')
-          div(v-else)
-            a(:href="portfolioData[nowtab][nowindex].projectLink", target = "_blank")
-              #webCover(:style="{'background-image': 'url('+portfolioData[nowtab][nowindex].coverImg+')', 'cursor':'pointer','width':'100%','height':'203px'}")
-      .col-md-6
-        h3 {{portfolioData[nowtab][nowindex].title}}
-        p {{portfolioData[nowtab][nowindex].description}}
-        
-        
-section#exp(data-0="opacity: 0;" data-300="opacity: 1;")
-  h1 斌綸編年史
-  //- h4 經歷
-  hr
-  .container
-   
-   .line_vertical
-   .boxview
-     //- .linecenter
-     .left
-       .box
-         .line_horizontal
-           h3 2008.09~
-         h4 教育不是灌輸，而是點燃火焰
-         p 　　高中，遇到兩位不錯的老師 —— 公民老師和美術老師，讀了老師推薦的書"江湖在哪裡？"，我開始認知到，這個世界存在很多可能，很多事情都不只是我們眼睛看到的那樣，但人生真正的燃點，是我高三在補習班補習的日子。<br>　　
-       .box
-         .line_horizontal
-           h3 2011.07~
-         h4 真正的開始
-         p 　　大學，看到很多人生的不同選擇，選擇自己想成為樣的人，學了自己想學的東西，我覺得我的人生從大學才真正的開始。<br>大學開始前的暑假，被同學找去聽大專生涯發展協會的演講，剛好也因為國、高中，學校請一些知名人士來學校演講，有時候可以從他們身上聽到很多不錯的人生經驗，而且通常演講廳都會有冷氣放送，於是我就報名了。大一的演講很多都是跟人際關係相關的，剛好我從小到大都有點自閉傾向，一直想改變這個壞習慣，又剛好他們正在招募在演講廳服務的志工，但看他們都很親切地對學員微笑、打招呼、聊天、回答問題，有時還要上台作活動宣傳，那些都是我最不擅長的，加入他們根本就是把自己推入火坑，這時想起了我很喜歡的名言，蓬生麻中，不扶而直，如果我不讓環境改變我，光靠我自己的毅力，要何時才能看見效果？於是我眼睛閉著，跳進了火坑。
-       .box
-         .line_horizontal
-           h3 2014.03
-         h4 這是我的忍道
-         p 　　適逢學運期間，看到某一電視台不斷抹黑學運，當時我不是很能理解，怎麼會出現這麼誇張的集團式顛倒是非？上頭命令抹黑，怎麼底下的人就照做了呢？當時我在line上打了一段話：<br>「<b>他們沒有骨氣，只有利益<br>我一定要變得很強很厲害<br>才不用害怕說真話，才能果斷離開不屑的職場<br>不知道做不做的到，但也只能這麼相信著...</b>」<br>於是，更努力的讓自己的程式能力變強，就算已經決定不讀研究所，也跟著同學去修了很多研究所的硬課。
-       .box
-         .line_horizontal
-           h3 2016.04~2017.04
-         h4 初出茅廬
-         p 　　第一次找工作，不是很得心應手，想去的公司基本上都不想找沒經驗的人，有通知面試的公司，大多也都因為我無法在短短的10分鐘內，表現出真正的自我而被打槍。最後選擇加入公司規模屬於中大型的遊戲公司——鈊象電子。在裡面適應算滿快的，很快地就跟上團隊的腳步，並且一起走完一個專案。但後來公司開新案組新團隊的時候，我感覺上頭都在勾心鬥角，好像每個人都不想發生一點意外，只想保住自己現在在公司的地位，根本沒人真正的想做事，我不知道他們在幹嘛...於是決定離開這個環境。
-     .right
-       .box.firstbox
-         .line_horizontal
-           h3 1993.04.28~2008.09
-         h4 人生的空窗期
-         p 　　在高中以前，基本上每天生活不外乎考試、補習、打電動，對什麼事都不是很在乎，活得還算無憂無慮，但現在回頭看起來，當時就好像沒有目標的行屍走肉，我稱這段時期為<b>人生的空窗期</b>。
-       .box
-         .line_horizontal
-           h3 ~2011.07
-         h4 教育不是灌輸，而是點燃火焰
-         p 　　高中補習班算是我人生的燃點，在裡面我受到兩種人影響，一是同學，二是老師。看到很多成績不好的同學，因為補習班的鼓勵，放學到補喜班自習到十二點，假日還在早上八點，補習班一開門就走進自修教室，我因為不想輸給他們，所以也跟著這麼做，後來發現在大家都拼命往前跑的環境裡，自己也會不自覺地用盡全力跑了起來，知道一個環境對我的影響有多麼大之後，我喜歡上一句老名言——<b>蓬生麻中，不扶而直</b>。<br>　　在四、五年後看到日本電影<a href="https://www.facebook.com/permalink.php?story_fbid=995715110451669&id=100000395687172">墊底辣妹</a>，讓我重新回憶起這段熱血夾雜的痛苦的日子，覺得有這段經歷不枉此生。
-       .box
-         .line_horizontal
-           h3 2013.07~
-         h4 第二個火坑
-         p 　　大學三年級，要開始考慮畢業後要繼續念書，還是要去工作的時候，其實我是不太想繼續讀研究所的，因為我討厭台灣的教育方式，不想一直順著這條路走，但唸了兩年資工，還是只會寫小黑窗程式的我，覺得如果畢業之後還是這樣的話，肯定會失業的，於是找了相對於其他學校指導教授，給學生的課業壓力較大的教授指導專題，雖然一直很害怕因為能力達不到教授要求，而無法順利畢業，但想起補習班老師說的，「爆炸性的壓力才有爆炸性的成長」，而且只要最後結果不是死亡，人生就還沒到最慘的時候，於是我又跳入了另一個火坑，學校大部分的作品都是在這兩年，以實驗室為家一點一滴做出來的。
-       .box
-         .line_horizontal
-           h3 2014.10~
-         h4 目標確定
-         p 　　學運過後，年輕族群吹起了一陣改變的風，剛好這時我參加了TEDxTaipei年會，聽到很多年輕人在自己的領域，努力改變著自己不喜歡的台灣社會，身為年輕人的我，看到大家這麼努力，我也不想輸，想變得跟他們一樣厲害，立志以後也要用自己的專業能力為這個社會做點什麼。<b>從此之後，我開始關注有夢想、想努力改變台灣環境的人們，並且在能力範圍內贊助，幫他們達成夢想。</b>
-       .box
-         .line_horizontal
-           h3 2017.04~now
-         h4 努力轉職中
-         p 　　離職後決定學習新技能，再重新出發，目前努力學習網頁前、後端中。
-   img.rocket(src="https://c1.staticflickr.com/5/4197/34268020494_d23b0dc9a4_o.png", alt="")
-   img.fire(src="https://c1.staticflickr.com/5/4275/34268020014_025bfde471_o.png", alt="")
-   .somke1
-   .somke2
-   .somke3
+  section#portfolio
+    h1(data-bottom-top="transform: translateY(-50px);opacity: 0" data-center="transform: translateY(0px);opacity: 1") 作品集
+    //- h4 作品
+    hr
+    .container
+      .swiper-container.swiper1
+        ul.swiper-wrapper.nav.nav-tabs(data-bottom-top="transform: translateY(-50px);opacity: 0" data-center="transform: translateY(0px);opacity: 1")
+          li.swiper-slide.active
+            a(data-toggle="tab" @click="setnowtab('web')") 網頁開發(前端)
+          li.swiper-slide
+            a(data-toggle="tab" @click="setnowtab('game')") 遊戲開發(前端)
+          li.swiper-slide
+            a(data-toggle="tab" @click="setnowtab('android')") Android App
+          li.swiper-slide
+            a(data-toggle="tab" @click="setnowtab('cg')") 電腦圖學
+          li.swiper-slide
+            a(data-toggle="tab" @click="setnowtab('studyproject')") 大學專題
+          li.swiper-slide
+            a(data-toggle="tab" @click="setnowtab('video')") 影片剪輯
+      .swiper-container.swiper2(data-0="transform: translateY(-50px);opacity: 0" data-300="transform: translateY(0px);opacity: 1" )
+        .swiper-wrapper
+          .swiper-slide(v-for="data in portfolioData1d")
+            .col-md-6
+              //沒有圖片,直接顯示youtube
+              div(v-if="data.coverImg ===''")
+                .youtube(v-if="data.youtubeLink !==''", style="display:block")
+                  iframe#yt-without-Cover.ytPlayer(:src="data.youtubeLink+'?rel=0'+'&enablejsapi=1'", frameborder="0")
+              div(v-else)
+                .youtube(v-if="data.youtubeLink !==''")
+                  iframe#yt-with-Cover.ytPlayer(:src="data.youtubeLink+'?rel=0'+'&enablejsapi=1'", frameborder="0")
+                  #youtubeCover(@click="show", :style="{'background-image': 'url('+data.coverImg+')', 'cursor':'pointer'}")
+                    button.ytp-large-play-button.ytp-button
+                      svg(height='100%', version='1.1', viewbox='0 0 68 48', width='100%')
+                        path.ytp-large-play-button-bg(d='m.66 37.62c0 0 .66 4.7 2.7 6.77 2.58 2.71 5.98 2.63 7.49 2.91 5.43.52 23.1.68 23.12.68 0-1.3e-5 14.29-.02 23.81-.71 1.32-.15 4.22-.17 6.81-2.89 2.03-2.07 2.7-6.77 2.7-6.77 0 0 .67-5.52.67-11.04l0-5.17c0-5.52-.67-11.04-.67-11.04 0 0-.66-4.7-2.7-6.77C62.03.86 59.13.84 57.8.69 48.28 0 34 0 34 0 33.97 0 19.69 0 10.18.69 8.85.84 5.95.86 3.36 3.58 1.32 5.65.66 10.35.66 10.35c0 0-.55 4.5-.66 9.45l0 8.36c.1 4.94.66 9.45.66 9.45z', fill='#1f1f1e', fill-opacity='0.81')
+                        path(d='m26.96 13.67 18.37 9.62-18.37 9.55 0-19.17z', fill='#fff')
+                        path(d='M45.02 23.46 45.32 23.28 26.96 13.67 43.32 24.34 45.02 23.46z', fill='#ccc')
+                div(v-else)
+                  a(:href="data.projectLink", target = "_blank")
+                    #webCover(:style="{'background-image': 'url('+data.coverImg+')', 'cursor':'pointer','width':'100%','height':'203px'}")
+            .col-md-6
+              h3 {{data.title}}
+              p {{data.description}}
+        .swiper-button-prev
+        .swiper-button-next
+      //- .row(data-0="transform: translateY(-50px);opacity: 0" data-300="transform: translateY(0px);opacity: 1" )
+      //-   div(v-if="portfolioData[nowtab].length > 1")
+      //-     .arrow_left(@click="delta(-1)")
+      //-       i.fa.fa-angle-left
+      //-     .arrow_right(@click="delta(1)")
+      //-       i.fa.fa-angle-right
+      //-   .col-md-6
+      //-     //沒有圖片,直接顯示youtube
+      //-     div(v-if="portfolioData[nowtab][nowindex].coverImg ===''")
+      //-       .youtube(v-if="portfolioData[nowtab][nowindex].youtubeLink !==''", style="display:block")
+      //-         iframe#yt-without-Cover.ytPlayer(:src="portfolioData[nowtab][nowindex].youtubeLink+'?rel=0'", frameborder="0")
+      //-     div(v-else)
+      //-       .youtube(v-if="portfolioData[nowtab][nowindex].youtubeLink !==''")
+      //-         iframe#yt-with-Cover.ytPlayer(:src="portfolioData[nowtab][nowindex].youtubeLink+'?rel=0'", frameborder="0")
+      //-         #youtubeCover(@click="show", :style="{'background-image': 'url('+portfolioData[nowtab][nowindex].coverImg+')', 'cursor':'pointer'}")
+      //-           button.ytp-large-play-button.ytp-button
+      //-             svg(height='100%', version='1.1', viewbox='0 0 68 48', width='100%')
+      //-               path.ytp-large-play-button-bg(d='m.66 37.62c0 0 .66 4.7 2.7 6.77 2.58 2.71 5.98 2.63 7.49 2.91 5.43.52 23.1.68 23.12.68 0-1.3e-5 14.29-.02 23.81-.71 1.32-.15 4.22-.17 6.81-2.89 2.03-2.07 2.7-6.77 2.7-6.77 0 0 .67-5.52.67-11.04l0-5.17c0-5.52-.67-11.04-.67-11.04 0 0-.66-4.7-2.7-6.77C62.03.86 59.13.84 57.8.69 48.28 0 34 0 34 0 33.97 0 19.69 0 10.18.69 8.85.84 5.95.86 3.36 3.58 1.32 5.65.66 10.35.66 10.35c0 0-.55 4.5-.66 9.45l0 8.36c.1 4.94.66 9.45.66 9.45z', fill='#1f1f1e', fill-opacity='0.81')
+      //-               path(d='m26.96 13.67 18.37 9.62-18.37 9.55 0-19.17z', fill='#fff')
+      //-               path(d='M45.02 23.46 45.32 23.28 26.96 13.67 43.32 24.34 45.02 23.46z', fill='#ccc')
+      //-       div(v-else)
+      //-         a(:href="portfolioData[nowtab][nowindex].projectLink", target = "_blank")
+      //-           #webCover(:style="{'background-image': 'url('+portfolioData[nowtab][nowindex].coverImg+')', 'cursor':'pointer','width':'100%','height':'203px'}")
+      //-   .col-md-6
+      //-     h3 {{portfolioData[nowtab][nowindex].title}}
+      //-     p {{portfolioData[nowtab][nowindex].description}}
+
+
+  section#exp(data-0="opacity: 0;" data-300="opacity: 1;")
+    h1 斌綸編年史
+    //- h4 經歷
+    hr
+    .container
+
+     .line_vertical
+     .boxview
+       //- .linecenter
+       .left
+         .box(v-for="Litem in BioDataLeft")
+           .line_horizontal
+             h3 {{Litem.timeline}}
+           h4.subheading {{Litem.title}}
+           //v-html will not escape html tag from vue output
+           p(v-html="Litem.content")
+
+       .right
+         .box.firstbox
+           .line_horizontal
+             h3 1993.04~2008.09
+           h4.subheading 人生的空窗期
+           p 　　在高中以前，基本上每天生活不外乎考試、補習、打電動，對什麼事都不是很在乎，活得還算無憂無慮，但現在回頭看起來，當時就好像沒有目標的行屍走肉，我稱這段時期為<b>人生的空窗期</b>。
+         //slice first item because it's showed above
+         .box(v-for="Ritem in BioDataRight.slice(1)")
+           .line_horizontal
+             h3 {{Ritem.timeline}}
+           h4.subheading {{Ritem.title}}
+           //v-html will not escape html tag from vue output
+           p(v-html="Ritem.content")
+     img.rocket(src="https://c1.staticflickr.com/5/4197/34268020494_d23b0dc9a4_o.png", alt="")
+     img.fire(src="https://c1.staticflickr.com/5/4275/34268020014_025bfde471_o.png", alt="")
+     .somke1
+     .somke2
+     .somke3

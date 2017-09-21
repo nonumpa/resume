@@ -18,6 +18,7 @@ body, html
   height: 100%
   margin: 0
   padding: 0
+  font-size: 16px
   // position: relative
 // .container
 //   padding: 0px 10px
@@ -58,12 +59,15 @@ section
     font-size: 36px
     margin-top: 0px
   .section-subheading
-    font-size: 16px
+    font-size: 24px
+    
 
+    
 section#profile
   background-color: #eee
   // .container
   //   padding: 0
+  
   .col-md-5, .col-md-7
     // padding: 0px
   .icon-sea
@@ -77,8 +81,9 @@ section#profile
     padding-bottom: 10px
     padding-top: 25px
     // padding-right: 15px
-    
+
 section#exp
+  //default hidden
   .hidden
     visibility: hidden
   position: relative
@@ -92,7 +97,7 @@ section#exp
     left: 50%
     transform: translateX(-50%)
     width: 20px
-    height: 1400px
+    // height: 1400px  //*auto scale by js
     background-color: #aaa
     overflow: hidden
   .anismokefly
@@ -114,7 +119,7 @@ section#exp
       100%
         opacity: 0.7
         top: 180px
-        height: 1400px
+        // height: 1400px
   .aniboxline
     animation: boxline 6s 1 ease-in
     @keyframes boxline
@@ -163,7 +168,7 @@ section#exp
           left: -3px
         h3
           position: absolute
-          top: -14px
+          top: -30px
           right: calc(100% + 30px)
     .right
       text-align: left
@@ -174,7 +179,7 @@ section#exp
         padding: 30px
         width: 400px
         position: relative
-        left: 20px
+        right: -20px
         // animation: boxline 6s 1 ease-in
       .line_horizontal
         position: absolute
@@ -188,7 +193,7 @@ section#exp
           right: -3px
         h3
           position: absolute
-          top: -14px
+          top: -30px
           left: calc(100% + 30px)
       .firstbox
         animation: none
@@ -200,8 +205,8 @@ section#exp
   .rocket
     position: absolute
     left: 50%
-    top: 1530px
-    transform: translateX(-52%)
+    // top: 1530px //*rocket position auto set by js
+    transform: translateX(-51%)
     width: 150px
     height: 150px
   .anirocketfly
@@ -211,8 +216,8 @@ section#exp
         top: 330px
       50%
         top: 330px
-      100%
-        top: 1530px
+      // 100%
+      //   top: 1530px
     
   .fire
     position: absolute
@@ -313,6 +318,17 @@ section#exp
 section#portfolio
   .container
     padding: 0px 20px
+  .nav.nav-tabs
+    //-- prevent tabs line break
+    white-space: nowrap
+    width: 100%
+    // display: inline
+    // overflow: hidden
+    li
+      //donow why inline cannot use here
+      display: inline-block
+      float: none
+      
   .row
     position: relative
     transition: 0.5s
@@ -392,6 +408,7 @@ section#portfolio
       height: 100%
       padding-bottom: 10px
       padding-top: 35px
+    
   section#exp
     .anismokefly
       animation: smokefly 6s 1 ease-in
@@ -412,7 +429,7 @@ section#portfolio
         100%
           opacity: 0.7
           top: 180px
-          height: 1600px
+          // height: 1600px
     .boxview
       .left
         .box
@@ -422,16 +439,7 @@ section#portfolio
           width: 480px
     .line_vertical
       height: 1600px
-      // animation: smokefly 6s 1 ease-in
-      // @keyframes smokefly
-      //   0%
-      //     height: 180px
-      //   50%
-      //     height: 180px
-      //   100%
-      //     height: 1600px
-    .rocket
-      top: 1730px
+      
     .anirocketfly
       animation: rocketfly 6s 1 ease-in
       @keyframes rocketfly
@@ -439,8 +447,8 @@ section#portfolio
           top: 330px
         50%
           top: 330px
-        100%
-          top: 1730px
+        // 100%
+        //   top: 1730px
 
 @media (max-width: 993px)
   section#profile
@@ -451,3 +459,94 @@ section#portfolio
       height: 80%
       padding-bottom: 10px
       padding-top: 35px
+  // section#portfolio
+  //   .swiper-button-prev
+  //     display: none
+  //   .swiper-button-next
+  //     display: none
+  section#exp
+    .line_vertical
+      left: calc(50% - 208px)
+    .left
+      display: none
+    .boxview
+      width: 100%
+      .right
+        position: relative
+        .box
+          left: 50%
+          transform: translateX(-50%)
+    .rocket
+      left: calc(50% - 208px)
+      transform: translateX(-51.5%)
+    .fire
+      top: 350px
+      left: calc(50% - 208px)
+      transform: translateX(-50%)
+    .somke1
+      left: calc(50% - 208px)
+    .somke2
+      left: calc(45% - 208px)
+    .somke3
+      left: calc(53% - 208px)
+    .anismokefly
+      animation: smokefly 6s 1 ease-in
+      @keyframes smokefly
+        0%
+          opacity: 0
+          top: 340px
+          height: 20px
+        25%
+          top: 200px
+          height: 130px
+        40%
+          top: 180px
+          height: 180px
+        50%
+          top: 180px
+          height: 180px
+        100%
+          opacity: 0.7
+          top: 180px
+          // height: 1600px
+    .anirocketfly
+      animation: rocketfly 6s 1 ease-in
+      @keyframes rocketfly
+        0%
+          top: 370px
+        50%
+          top: 370px
+        // 100%
+        //   top: 1730px
+@media (max-width: 425px)
+  // hide swiper botton
+  section#portfolio
+    .swiper-button-prev
+      display: none
+    .swiper-button-next
+      display: none
+  section#exp
+    .line_vertical
+      left: calc(50% - 158px)
+    .boxview
+      // width: 100%
+      .right
+        // position: relative
+        .box
+          padding-right: 0px
+          width: 300px
+          // left: 50%
+          // transform: translateX(-50%)
+    .rocket
+      left: calc(50% - 158px)
+      transform: translateX(-51.5%)
+    .fire
+      top: 350px
+      left: calc(50% - 158px)
+      transform: translateX(-50%)
+    .somke1
+      left: calc(50% - 158px)
+    .somke2
+      left: calc(45% - 158px)
+    .somke3
+      left: calc(53% - 158px)

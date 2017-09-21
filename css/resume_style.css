@@ -8,6 +8,7 @@ body, html {
   height: 100%;
   margin: 0;
   padding: 0;
+  font-size: 16px;
 }
 
 nav.navbar.navbar-default .container {
@@ -47,7 +48,7 @@ section .section-heading {
   margin-top: 0px;
 }
 section .section-subheading {
-  font-size: 16px;
+  font-size: 24px;
 }
 
 section#profile {
@@ -81,7 +82,6 @@ section#exp .line_vertical {
   left: 50%;
   transform: translateX(-50%);
   width: 20px;
-  height: 1400px;
   background-color: #aaa;
   overflow: hidden;
 }
@@ -109,7 +109,6 @@ section#exp .anismokefly {
   100% {
     opacity: 0.7;
     top: 180px;
-    height: 1400px;
   }
 }
 section#exp .aniboxline {
@@ -165,7 +164,7 @@ section#exp .boxview .left .line_horizontal:after {
 }
 section#exp .boxview .left .line_horizontal h3 {
   position: absolute;
-  top: -14px;
+  top: -30px;
   right: calc(100% + 30px);
 }
 section#exp .boxview .right {
@@ -177,7 +176,7 @@ section#exp .boxview .right .box {
   padding: 30px;
   width: 400px;
   position: relative;
-  left: 20px;
+  right: -20px;
 }
 section#exp .boxview .right .line_horizontal {
   position: absolute;
@@ -192,7 +191,7 @@ section#exp .boxview .right .line_horizontal:after {
 }
 section#exp .boxview .right .line_horizontal h3 {
   position: absolute;
-  top: -14px;
+  top: -30px;
   left: calc(100% + 30px);
 }
 section#exp .boxview .right .firstbox {
@@ -207,8 +206,7 @@ section#exp .boxview .right .firstbox .line_horizontal:after {
 section#exp .rocket {
   position: absolute;
   left: 50%;
-  top: 1530px;
-  transform: translateX(-52%);
+  transform: translateX(-51%);
   width: 150px;
   height: 150px;
 }
@@ -221,9 +219,6 @@ section#exp .anirocketfly {
   }
   50% {
     top: 330px;
-  }
-  100% {
-    top: 1530px;
   }
 }
 section#exp .fire {
@@ -347,6 +342,14 @@ section#exp .anismoke3fly {
 section#portfolio .container {
   padding: 0px 20px;
 }
+section#portfolio .nav.nav-tabs {
+  white-space: nowrap;
+  width: 100%;
+}
+section#portfolio .nav.nav-tabs li {
+  display: inline-block;
+  float: none;
+}
 section#portfolio .row {
   position: relative;
   transition: 0.5s;
@@ -463,7 +466,6 @@ section#portfolio #webCover {
     100% {
       opacity: 0.7;
       top: 180px;
-      height: 1600px;
     }
   }
   section#exp .boxview .left .box {
@@ -475,9 +477,6 @@ section#portfolio #webCover {
   section#exp .line_vertical {
     height: 1600px;
   }
-  section#exp .rocket {
-    top: 1730px;
-  }
   section#exp .anirocketfly {
     animation: rocketfly 6s 1 ease-in;
   }
@@ -487,9 +486,6 @@ section#portfolio #webCover {
     }
     50% {
       top: 330px;
-    }
-    100% {
-      top: 1730px;
     }
   }
 }
@@ -501,5 +497,111 @@ section#portfolio #webCover {
     height: 80%;
     padding-bottom: 10px;
     padding-top: 35px;
+  }
+
+  section#exp .line_vertical {
+    left: calc(50% - 208px);
+  }
+  section#exp .left {
+    display: none;
+  }
+  section#exp .boxview {
+    width: 100%;
+  }
+  section#exp .boxview .right {
+    position: relative;
+  }
+  section#exp .boxview .right .box {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  section#exp .rocket {
+    left: calc(50% - 208px);
+    transform: translateX(-51.5%);
+  }
+  section#exp .fire {
+    top: 350px;
+    left: calc(50% - 208px);
+    transform: translateX(-50%);
+  }
+  section#exp .somke1 {
+    left: calc(50% - 208px);
+  }
+  section#exp .somke2 {
+    left: calc(45% - 208px);
+  }
+  section#exp .somke3 {
+    left: calc(53% - 208px);
+  }
+  section#exp .anismokefly {
+    animation: smokefly 6s 1 ease-in;
+  }
+  @keyframes smokefly {
+    0% {
+      opacity: 0;
+      top: 340px;
+      height: 20px;
+    }
+    25% {
+      top: 200px;
+      height: 130px;
+    }
+    40% {
+      top: 180px;
+      height: 180px;
+    }
+    50% {
+      top: 180px;
+      height: 180px;
+    }
+    100% {
+      opacity: 0.7;
+      top: 180px;
+    }
+  }
+  section#exp .anirocketfly {
+    animation: rocketfly 6s 1 ease-in;
+  }
+  @keyframes rocketfly {
+    0% {
+      top: 370px;
+    }
+    50% {
+      top: 370px;
+    }
+  }
+}
+@media (max-width: 425px) {
+  section#portfolio .swiper-button-prev {
+    display: none;
+  }
+  section#portfolio .swiper-button-next {
+    display: none;
+  }
+
+  section#exp .line_vertical {
+    left: calc(50% - 158px);
+  }
+  section#exp .boxview .right .box {
+    padding-right: 0px;
+    width: 300px;
+  }
+  section#exp .rocket {
+    left: calc(50% - 158px);
+    transform: translateX(-51.5%);
+  }
+  section#exp .fire {
+    top: 350px;
+    left: calc(50% - 158px);
+    transform: translateX(-50%);
+  }
+  section#exp .somke1 {
+    left: calc(50% - 158px);
+  }
+  section#exp .somke2 {
+    left: calc(45% - 158px);
+  }
+  section#exp .somke3 {
+    left: calc(53% - 158px);
   }
 }
